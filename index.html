@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Forge — Premium Digital Product Studio</title>
+    <meta name="description" content="Vision Forge designs and builds bespoke websites, SaaS products, and digital experiences that elevate forward-thinking brands.">
+    <!-- Google Fonts: Outfit for Headings, Plus Jakarta Sans for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Header -->
+    <header class="header-main">
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="#">
+                    <span class="logo-text">Vision <span>Forge</span></span>
+                </a>
+            </div>
+            
+            <div class="nav-links-desktop">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#team" class="nav-link">Team</a>
+            </div>
+
+            <div class="nav-cta-desktop">
+                <a href="#contact" class="btn btn-secondary-pill">Let's Talk</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+        
+        <!-- Mobile Drawer -->
+        <div class="nav-drawer" id="navDrawer">
+            <a href="#services" class="drawer-link">Services</a>
+            <a href="#work" class="drawer-link">Work</a>
+            <a href="#process" class="drawer-link">Process</a>
+            <a href="#team" class="drawer-link">Team</a>
+            <a href="#contact" class="btn btn-primary-pill drawer-btn">Let's Talk</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="section-hero" id="hero">
+            <div class="hero-content">
+                <div class="badge-new animate-fade-in">Introducing Vision Forge 2.0</div>
+                <div class="hero-portrait-wrapper animate-fade-in">
+                    <img src="assets/user_portrait.png" alt="Vision Forge Craftsman" class="hero-portrait">
+                </div>
+                <h1 class="hero-title animate-slide-up">
+                    Forging Digital Visions <br>
+                    Into <span class="highlight-text">Elegant Realities</span>
+                </h1>
+                <p class="hero-subtitle animate-slide-up-delay">
+                    We craft premium digital products, bespoke SaaS web applications, and brand ecosystems that blend visual artistry with solid engineering.
+                </p>
+                <div class="hero-actions animate-slide-up-delay-2">
+                    <a href="#work" class="btn btn-primary-pill">Explore Our Work</a>
+                    <a href="#contact" class="btn btn-secondary-pill">Book a Call</a>
+                </div>
+                
+                <div class="hero-stats animate-fade-in-delay">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Success</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Products Launched</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">5★</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image Visual Showcase -->
+            <div class="hero-showcase container">
+                <div class="showcase-frame animate-scale-up">
+                    <img src="assets/hero_showcase.jpg" alt="Vision Forge Dashboard Preview" class="showcase-img">
+                    <div class="showcase-glass-card">
+                        <div class="card-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <div class="card-body">
+                            <p class="glass-title">Active Projects</p>
+                            <p class="glass-value">12 / 12</p>
+                            <span class="glass-tag">On Track</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Infinite Scrolling Marquee -->
+        <section class="section-marquee">
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Iteration 1 -->
+                    <span class="marquee-item"><span class="bullet">✦</span> COBALT LABS</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> AETHERIA</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> NEXUS AG</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> LUMEN CARE</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> KRONOS GROUP</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> OCTANE CORP</span>
+                    <!-- Iteration 2 (For loop feel) -->
+                    <span class="marquee-item"><span class="bullet">✦</span> COBALT LABS</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> AETHERIA</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> NEXUS AG</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> LUMEN CARE</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> KRONOS GROUP</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> OCTANE CORP</span>
+                </div>
+            </div>
+            <div class="marquee-wrapper wrapper-reverse">
+                <div class="marquee-track track-reverse">
+                    <!-- Iteration 1 -->
+                    <span class="marquee-item"><span class="bullet">✦</span> DESIGN WITH MEANING</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> BUILD FOR SCALABILITY</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> CODE AS ART</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> ELEGANCE BY DEFAULT</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> FUTURE PROOF</span>
+                    <!-- Iteration 2 -->
+                    <span class="marquee-item"><span class="bullet">✦</span> DESIGN WITH MEANING</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> BUILD FOR SCALABILITY</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> CODE AS ART</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> ELEGANCE BY DEFAULT</span>
+                    <span class="marquee-item"><span class="bullet">✦</span> FUTURE PROOF</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section ("The Forge") -->
+        <section class="section-services container scroll-reveal" id="services">
+            <div class="section-header">
+                <span class="section-subtitle">Our Capabilities</span>
+                <h2 class="section-title">Bespoke Solutions Built to Elevate</h2>
+                <p class="section-description">We combine digital strategy, aesthetic design, and deep technical expertise to build products that deliver business impact.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="card-title">UI/UX & Brand Design</h3>
+                    <p class="card-text">We create visually striking interfaces and human-centered user experiences that outline your product story and engage users instantly.</p>
+                    <div class="card-tags">
+                        <span class="tag">Wireframing</span>
+                        <span class="tag">Design Systems</span>
+                        <span class="tag">Prototyping</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3 class="card-title">Web & SaaS Engineering</h3>
+                    <p class="card-text">Clean, optimized, and performant frontend and backend systems built to scale seamlessly. No templates, just bespoke clean code.</p>
+                    <div class="card-tags">
+                        <span class="tag">React & Next.js</span>
+                        <span class="tag">Custom APIs</span>
+                        <span class="tag">Performant DB</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h3 class="card-title">Product Strategy & Growth</h3>
+                    <p class="card-text">We help refine your product vision, map out architecture milestones, integrate analytics, and position your digital product for success.</p>
+                    <div class="card-tags">
+                        <span class="tag">Roadmapping</span>
+                        <span class="tag">User Research</span>
+                        <span class="tag">SEO Audits</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Showcase -->
+        <section class="section-work container scroll-reveal" id="work">
+            <div class="section-header-row">
+                <div class="section-header">
+                    <span class="section-subtitle">Crafted Artifacts</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                </div>
+                <div class="header-action">
+                    <a href="#contact" class="btn btn-secondary-pill">Forge a New Project</a>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project1.jpg" alt="Aether E-Commerce Platform" class="project-img">
+                        <div class="project-overlay">
+                            <span class="btn-view">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">E-Commerce / Branding</span>
+                        <h3 class="project-title">Aether Luxury Boutique</h3>
+                        <p class="project-desc">A premium checkout and shopping experience designed for an eco-conscious high fashion brand.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project2.jpg" alt="Nova Business Analytics" class="project-img">
+                        <div class="project-overlay">
+                            <span class="btn-view">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">SaaS Platform / Dashboard</span>
+                        <h3 class="project-title">Nova Analytics Dashboard</h3>
+                        <p class="project-desc">Real-time data reporting for large enterprise operations, built with elegant visual graphs and dark-light toggles.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project3.jpg" alt="Aura Health Application" class="project-img">
+                        <div class="project-overlay">
+                            <span class="btn-view">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Mobile App / UI/UX</span>
+                        <h3 class="project-title">Aura Meditation App</h3>
+                        <p class="project-desc">A calm, minimalist interface for mental health tracking, designed to look breathing and alive using micro-animations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section ("How We Forge") -->
+        <section class="section-process container scroll-reveal" id="process">
+            <div class="section-header">
+                <span class="section-subtitle">Our Method</span>
+                <h2 class="section-title">How We Forge</h2>
+                <p class="section-description">A structured, iterative workflow engineered to take ideas from concept to reality efficiently.</p>
+            </div>
+
+            <!-- Interactive Tab System -->
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="discover">
+                        <span class="tab-num">01</span> Discover
+                    </button>
+                    <button class="tab-btn" data-tab="design">
+                        <span class="tab-num">02</span> Design
+                    </button>
+                    <button class="tab-btn" data-tab="develop">
+                        <span class="tab-num">03</span> Develop
+                    </button>
+                    <button class="tab-btn" data-tab="deliver">
+                        <span class="tab-num">04</span> Deliver
+                    </button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Discover -->
+                    <div class="tab-panel active" id="discover">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <h3>Aligning Goals & Vision</h3>
+                                <p>We start by diving deep into your business objectives, understanding target demographics, and researching competitors. This phase ensures we build a clear, technical, and creative roadmap.</p>
+                                <ul class="panel-list">
+                                    <li>Stakeholder workshops</li>
+                                    <li>Competitive market research</li>
+                                    <li>Feature prioritizing and scope</li>
+                                </ul>
+                            </div>
+                            <div class="panel-graphic">
+                                <img src="assets/process_discover.jpg" alt="Discovery Phase Graphic" class="panel-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design -->
+                    <div class="tab-panel" id="design">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <h3>Visual Design & Prototyping</h3>
+                                <p>We lay down wireframes, map out navigation logic, and structure full design systems. Next, we build high-fidelity interactive prototypes showing exactly how the final system will behave.</p>
+                                <ul class="panel-list">
+                                    <li>Interactive Figma prototypes</li>
+                                    <li>Custom components design system</li>
+                                    <li>Responsive layouts across devices</li>
+                                </ul>
+                            </div>
+                            <div class="panel-graphic">
+                                <img src="assets/process_design.jpg" alt="Design Phase Graphic" class="panel-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Develop -->
+                    <div class="tab-panel" id="develop">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <h3>Solid Engineering & Animation</h3>
+                                <p>This is where we write clean, scalable, semantic markup and logic. We focus on lightweight assets, modern layout algorithms (Grid/Flex), and smooth scroll and hover animations.</p>
+                                <ul class="panel-list">
+                                    <li>Bespoke responsive coding</li>
+                                    <li>Strict SEO and performance audit</li>
+                                    <li>Micro-animations and scroll events</li>
+                                </ul>
+                            </div>
+                            <div class="panel-graphic">
+                                <img src="assets/process_develop.jpg" alt="Development Phase Graphic" class="panel-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deliver -->
+                    <div class="tab-panel" id="deliver">
+                        <div class="panel-grid">
+                            <div class="panel-info">
+                                <h3>Launching with Quality</h3>
+                                <p>We run intensive cross-browser validation, accessibility assessments, and speed optimizations before making the system live. We transfer files cleanly and setup analytics monitors.</p>
+                                <ul class="panel-list">
+                                    <li>Comprehensive UI testing</li>
+                                    <li>Hosting setup & CDN optimization</li>
+                                    <li>Hand-off documentation & analytics</li>
+                                </ul>
+                            </div>
+                            <div class="panel-graphic">
+                                <img src="assets/process_deliver.jpg" alt="Delivery Phase Graphic" class="panel-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="section-team container scroll-reveal" id="team">
+            <div class="section-header">
+                <span class="section-subtitle">The Blacksmiths</span>
+                <h2 class="section-title">The Minds Behind the Work</h2>
+                <p class="section-description">A small, passionate group of designers, engineers, and strategists collaborating to build premium software.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/team_member1.jpg" alt="Tushar Rawat" class="team-img">
+                        <div class="team-details-glass">
+                            <h3 class="team-name">Tushar Rawat</h3>
+                            <p class="team-role">Founder & Chief Strategy</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/team_member2.jpg" alt="Aastha Negi" class="team-img">
+                        <div class="team-details-glass">
+                            <h3 class="team-name">Aastha Negi</h3>
+                            <p class="team-role">Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-img-container">
+                        <img src="assets/team_member3.jpg" alt="Aditya Agarwal" class="team-img">
+                        <div class="team-details-glass">
+                            <h3 class="team-name">Aditya Agarwal</h3>
+                            <p class="team-role">Lead Architect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-contact container scroll-reveal" id="contact">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-subtitle">Let's Connect</span>
+                    <h2 class="section-title">Ready to Forge <br>Your Next Vision?</h2>
+                    <p class="contact-text">Get in touch to schedule a free strategy call. Tell us about your project, goals, and timeline, and we will get back to you with a custom roadmap.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Email Us</span>
+                                <a href="mailto:hello@visionforge.com" class="detail-link">hello@visionforge.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-label">Call Us</span>
+                                <a href="tel:+918595669310" class="detail-link">+91 85956 69310</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form action="#" class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-input" required placeholder=" ">
+                            <label for="name" class="form-label">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-input" required placeholder=" ">
+                            <label for="email" class="form-label">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" class="form-input" required placeholder=" ">
+                            <label for="subject" class="form-label">What are you building?</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" class="form-input form-textarea" required placeholder=" "></textarea>
+                            <label for="message" class="form-label">Tell us about your project</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary-pill btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <span class="logo-text">Vision <span>Forge</span></span>
+                <p class="footer-desc">Designing and engineering bespoke digital artifacts that define the future of technology.</p>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <span class="footer-col-title">Studio</span>
+                    <a href="#services">Services</a>
+                    <a href="#work">Work</a>
+                    <a href="#process">Process</a>
+                    <a href="#team">Team</a>
+                </div>
+                <div class="footer-col">
+                    <span class="footer-col-title">Social</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p class="copy-text">&copy; 2026 Vision Forge. All rights reserved.</p>
+            <p class="designer-text">Forged with precision</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Widgets -->
+    <div class="floating-widget-container">
+        <a href="#contact" class="floating-btn float-cta" aria-label="Start Project">
+            <span class="btn-icon">⚡</span>
+            <span class="btn-text">Forge Project</span>
+        </a>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
