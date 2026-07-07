@@ -318,7 +318,7 @@ button, input, textarea {
     width: 100%;
     max-width: 580px;
     height: 380px;
-    z-index: 2; /* Sits in front of the title */
+    z-index: 1; /* Sits behind the title text */
     pointer-events: none;
     display: flex;
     justify-content: center;
@@ -329,14 +329,17 @@ button, input, textarea {
     height: 100%;
     width: auto;
     object-fit: contain;
-    /* Clean shadow to lift the subject from the background grid */
-    filter: drop-shadow(0 15px 35px rgba(18, 18, 18, 0.12));
+    opacity: 0.85; /* Makes the image slightly transparent to blend with the grid */
+    mix-blend-mode: multiply; /* Removes any white background/fades automatically on light theme */
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 95%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 95%); /* Fades bottom of image to 100% transparency */
+    filter: drop-shadow(0 15px 35px rgba(18, 18, 18, 0.08));
 }
 
 .hero-title {
     position: relative;
-    z-index: 1; /* Sits behind the portrait */
-    margin-top: 220px; /* Moves text down, so portrait overlaps it */
+    z-index: 2; /* Sits in front of the portrait */
+    margin-top: 220px; /* Moves text down, so the title overlaps over the chest/torso */
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: clamp(2.5rem, 6vw, 4.5rem);
