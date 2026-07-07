@@ -316,8 +316,8 @@ button, input, textarea {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 580px;
-    height: 380px;
+    max-width: 680px;
+    height: 480px;
     z-index: 1; /* Sits behind the title text */
     pointer-events: none;
     display: flex;
@@ -339,11 +339,11 @@ button, input, textarea {
 .hero-title {
     position: relative;
     z-index: 2; /* Sits in front of the portrait */
-    margin-top: 220px; /* Moves text down, so the title overlaps over the chest/torso */
+    margin-top: 280px; /* Moves text down, so the title overlaps over the chest/torso */
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.1;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15;
     letter-spacing: -2px;
     color: var(--color-charcoal);
     margin-bottom: 1.5rem;
@@ -1294,13 +1294,13 @@ section[class^="section-"] {
     }
 
     .hero-portrait-wrapper {
-        height: 260px;
-        max-width: 320px;
+        height: 330px;
+        max-width: 390px;
         top: 3.5rem;
     }
 
     .hero-title {
-        margin-top: 130px;
+        margin-top: 170px;
     }
     
     .hero-actions {
