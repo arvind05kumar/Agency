@@ -116,4 +116,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // --- 6. Interactive FAQ Accordion ---
+    const faqTriggers = document.querySelectorAll('.faq-trigger');
+    
+    faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const faqItem = trigger.closest('.faq-item');
+            const faqContent = faqItem.querySelector('.faq-content');
+            const isActive = faqItem.classList.contains('active');
+            
+            // Toggle active state
+            if (isActive) {
+                faqItem.classList.remove('active');
+                faqContent.style.maxHeight = '0px';
+                trigger.setAttribute('aria-expanded', 'false');
+            } else {
+                // First close any other open FAQ items for a clean accordion effect
+                faqTriggers.forEach(otherTrigger => {
+                    const otherItem = otherTrigger.closest('.faq-item');
+                    if (otherItem !== faqItem && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-content').style.maxHeight = '0px';
+                        otherTrigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                faqItem.classList.add('active');
+                faqContent.style.maxHeight = faqContent.scrollHeight + 'px';
+                trigger.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
 });
