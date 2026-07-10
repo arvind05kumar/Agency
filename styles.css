@@ -1766,3 +1766,49 @@ section[class^="section-"] {
         padding: 1.8rem;
     }
 }
+
+/* --- 7. Projects Page Layout --- */
+.section-projects-hero {
+    position: relative;
+    padding: 12rem 0 6rem;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(37, 99, 235, 0.02) 0%, transparent 70%);
+}
+
+.projects-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.projects-hero-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--color-charcoal);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.projects-hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-projects-showcase {
+    padding-bottom: 8rem;
+}
+
+.projects-view-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.projects-view-more .btn {
+    padding: 1rem 2.2rem;
+    font-size: 1.05rem;
+}
