@@ -1816,11 +1816,31 @@ section[class^="section-"] {
 /* ==========================================================================
    COMPREHENSIVE MOBILE RESPONSIVENESS TWEAKS
    ========================================================================== */
-@media (max-width: 576px) {
-    /* Container adjustments */
+@media (max-width: 768px) {
+    /* Set tablet container padding */
     .container {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .hero-content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile container padding to prevent screen border touching */
+    .container {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+    
+    .hero-content {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
     }
     
     /* Global Section spacing */
@@ -1840,7 +1860,7 @@ section[class^="section-"] {
     /* Floating Header adjustments */
     .header-main {
         top: 1rem;
-        padding: 0 1rem;
+        padding: 0 1.5rem;
     }
     
     .nav-container {
@@ -1905,6 +1925,10 @@ section[class^="section-"] {
     .team-grid, 
     .social-cards-wrapper {
         gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem 1.25rem;
     }
     
     .projects-grid {
@@ -1978,7 +2002,7 @@ section[class^="section-"] {
     }
     
     .contact-form-container {
-        padding: 1.75rem 1.25rem;
+        padding: 1.5rem 1.25rem;
         border-radius: 20px;
     }
     
@@ -2039,10 +2063,19 @@ section[class^="section-"] {
 }
 
 @media (max-width: 400px) {
-    /* Narrow viewport tweaks */
+    /* Narrow viewport tweaks - still keeping 24px padding for visual margin */
     .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .hero-content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .header-main {
+        padding: 0 1.25rem;
     }
     
     .hero-title {
