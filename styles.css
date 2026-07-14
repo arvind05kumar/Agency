@@ -339,7 +339,7 @@ button, input, textarea {
 .hero-title {
     position: relative;
     z-index: 2; /* Sits in front of the portrait */
-    margin-top: 280px; /* Moves text down, so the title overlaps over the chest/torso */
+    margin-top: 360px; /* Moves text down, so the title overlaps over the chest/torso */
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: clamp(2rem, 5vw, 3.6rem);
@@ -940,10 +940,10 @@ section[class^="section-"] {
     bottom: 1.5rem;
     left: 5%;
     width: 90%;
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 16px;
     padding: 1.2rem;
     text-align: center;
@@ -966,14 +966,14 @@ section[class^="section-"] {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.2rem;
-    color: var(--color-charcoal);
+    color: #000000;
     line-height: 1.2;
 }
 
 .team-role {
     font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--color-muted);
+    font-weight: 700;
+    color: #000000;
     margin-top: 3px;
 }
 
@@ -1300,7 +1300,7 @@ section[class^="section-"] {
     }
 
     .hero-title {
-        margin-top: 170px;
+        margin-top: 240px;
     }
     
     .hero-actions {
