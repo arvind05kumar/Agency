@@ -175,6 +175,13 @@ button, input, textarea {
     align-items: center;
 }
 
+.nav-logo-img {
+    height: 2.1rem;
+    width: auto;
+    display: block;
+    transition: var(--transition-smooth);
+}
+
 .logo-text {
     font-family: var(--font-heading);
     font-weight: 700;
@@ -1871,6 +1878,10 @@ section[class^="section-"] {
         font-size: 1.15rem;
     }
     
+    .nav-logo-img {
+        height: 1.85rem;
+    }
+    
     .nav-drawer {
         top: 4.5rem;
         padding: 2rem 1.5rem;
@@ -2084,6 +2095,10 @@ section[class^="section-"] {
     
     .logo-text {
         font-size: 1.05rem;
+    }
+    
+    .nav-logo-img {
+        height: 1.6rem;
     }
     
     .floating-btn .btn-text {
