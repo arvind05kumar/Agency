@@ -936,74 +936,140 @@ section[class^="section-"] {
     object-fit: cover;
 }
 
-/* --- 11. Team Section --- */
+/* --- 11. Team Section (Clean 2-Founder Agency Layout) --- */
+.section-team {
+    padding: 6rem 0;
+}
+
+.section-team .section-header {
+    margin-bottom: 3.5rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Subtle scroll entrance (fade + translateY 16px to 0 once) */
+.section-team .section-header,
+.section-team .team-card {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-team.revealed .section-header {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-team.revealed .team-card:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.section-team.revealed .team-card:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.25s;
+}
+
+/* 2 cards side by side, centered, equal size */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 32px;
 }
 
 .team-card {
-    cursor: pointer;
+    background: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(18, 18, 18, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.team-img-container {
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(18, 18, 18, 0.08);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+/* Portrait aspect ratio 4:5 */
+.team-img-wrapper {
     position: relative;
-    border-radius: 24px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-sm);
-    aspect-ratio: 1/1;
-    background-color: var(--bg-card);
+    background-color: #F8FAFC;
 }
 
 .team-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.team-details-glass {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 5%;
-    width: 90%;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 16px;
-    padding: 1.2rem;
-    text-align: center;
-    box-shadow: 0 8px 32px rgba(18, 18, 18, 0.05);
-    transform: translateY(10px);
-    transition: var(--transition-smooth);
+    object-position: top center;
+    transition: transform 0.3s ease;
 }
 
 .team-card:hover .team-img {
-    transform: scale(1.08);
+    transform: scale(1.03);
 }
 
-.team-card:hover .team-details-glass {
-    transform: translateY(0);
-    border-color: rgba(37, 99, 235, 0.25);
-    box-shadow: 0 12px 40px rgba(18, 18, 18, 0.08);
+/* Solid white info bar at the bottom */
+.team-info {
+    padding: 1.25rem 1.5rem 1.5rem;
+    background: #FFFFFF;
+    text-align: left;
+    border-top: 1px solid rgba(18, 18, 18, 0.04);
 }
 
 .team-name {
     font-family: var(--font-heading);
+    font-size: 1.25rem;
     font-weight: 700;
-    font-size: 1.2rem;
-    color: #000000;
+    color: var(--color-charcoal);
     line-height: 1.2;
 }
 
 .team-role {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #000000;
-    margin-top: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    margin-top: 0.35rem;
+}
+
+/* Responsive: stacked on mobile */
+@media (max-width: 768px) {
+    .section-team {
+        padding: 4.5rem 0;
+    }
+
+    .section-team .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 28px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .section-team .section-header,
+    .section-team .team-card,
+    .team-card,
+    .team-img {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 /* --- 12. Contact Section --- */
@@ -1994,7 +2060,6 @@ section[class^="section-"] {
     /* Grids & Cards adjustments */
     .services-grid,
     .projects-grid,
-    .team-grid,
     .social-cards-wrapper {
         gap: 1.5rem;
     }
@@ -2050,21 +2115,6 @@ section[class^="section-"] {
 
     .panel-graphic {
         border-radius: 16px;
-    }
-
-    /* Team card glass layout */
-    .team-img-container {
-        border-radius: 16px;
-    }
-
-    .team-details-glass {
-        border-radius: 12px;
-        padding: 1rem;
-        bottom: 1rem;
-    }
-
-    .team-name {
-        font-size: 1.1rem;
     }
 
     /* Contact Section styling */
